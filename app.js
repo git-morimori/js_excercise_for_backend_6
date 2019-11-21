@@ -4,7 +4,7 @@ const app = express();
 const PORT = 3001;
 
 app.set('view engine', 'ejs');
-//静的ファイルを実装したら保存場所をセットする
+app.use(express.static('public'));
 //router/index.jsを実装したらルーティングをセットする
 
 app.listen(PORT, () => {
