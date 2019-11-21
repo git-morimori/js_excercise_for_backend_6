@@ -3,10 +3,10 @@ const router = express.Router();
 
 router
   .get('/', (req, res) => {
-    res.send('トップページです！');
+    res.render('top');
   })
   .get('/quiz', (req, res) => {
-    res.send('アバウトページです！');
+    res.render('quiz');
   });
 
 module.exports = router;
