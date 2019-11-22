@@ -106,7 +106,7 @@
   //   - 無し
   function finishQuiz() {
     resultElement.textContent = `${gameState.numberOfCorrects}/${gameState.quizzes.length}corrects`;
-    restartButton.style.display = 'block';
+    restartButton.style.display = 'inline-block';
   }
 
   // removeAllAnswers関数を実装する
@@ -146,6 +146,7 @@
 
     answers.forEach((answer, index) => {
       const answerItem = document.createElement('li');
+      answerItem.classList.add('button');
       answerItem.textContent = unescapeHTML(answer);
       answersContainer.appendChild(answerItem);
 
